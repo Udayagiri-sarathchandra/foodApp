@@ -8,10 +8,7 @@ const HeaderComponent = () => {
             <li>Home</li>
             <li>Contact</li>
             <li>About</li>
-            <li>
-              Cart
-              {/* <img src={user} alt="User" className="user-icon" /> */}
-            </li>
+            <li>Cart</li>
           </ul>
         </nav>
       </header>

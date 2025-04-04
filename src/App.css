@@ -110,7 +110,8 @@
 
 .resto-card:hover {
   cursor: pointer;
-  background-color: #f0f7f3;
+  background-color: #b9c0bc;
+  transform: translate(5px, 5px);
 }
 
 .resto-name {
