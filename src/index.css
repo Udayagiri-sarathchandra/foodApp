@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* shimmer css */
+.shimmer-container{
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.shimmer-card{
+  background-color: #f0f0f0;
+  border: solid 1px rgb(244, 242, 242);
+  height: 500px;
+  width: 255px;
+  margin: 10px;
+  border-radius: 4%;
+  box-shadow: 0 26px 58px 0 rgba(231, 231, 231, 0.22),
+    0 5px 14px 0 rgba(177, 176, 176, 0.18);
+}
+.shimmer-search{
+  background-color: #f0f0f0;
+  border: solid 1px rgb(244, 242, 242);
+  height: 50px;
+  margin: 10px;
+}
+.shimmer-filter{
+  height: 50px;
+  width:100px;
+  background-color: #f0f0f0;
+}
+

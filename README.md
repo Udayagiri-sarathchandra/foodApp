@@ -121,4 +121,178 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     //     })}
     //   </div>
     // );
+
+
+    // import { useState, useEffect } from "react";
+// // import { restarentInfo } from "../utils/constants";
+// import useRestaurantMenu from "../utils/useRestaurantMenu";
+// import Shimmer from "./Shimmer";
+// import { useParams } from "react-router-dom";
+
+// const RestroInfo = () => {
+//   const { resId } = useParams();
+//   const resInfo = useRestaurantMenu(resId);
+//   // const [resInfo, setResInfo] = useState(null);
+//   // useEffect(() => {
+//   //   fetchResInfo();
+//   // }, []);
+//   // const fetchResInfo = async () => {
+//   //   const data = await fetch(restarentInfo + resId);
+//   //   const json = await data.json();
+//   //   setResInfo(json?.data?.cards);
+//   //   console.log(json?.data?.cards);
+//   // };
+
+//   if (resInfo === null) {
+//     return <Shimmer />;
+//   }
+//   const { name, costForTwoMessage, cuisines, avgRating } =
+//     resInfo[2]?.card?.card?.info;
+//   //const {itemCards , title} = resInfo[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+//   // const { itemCards, title } =
+//   //   resInfo[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+//   // const {itemCards , title} = resInfo[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
+//   // const {itemCards , title} = resInfo[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card;
+
+//   // const [
+//   //   ,
+//   //   // Skip index 0
+//   //   card1Data,
+//   //   card2Data,
+//   //   card3Data,
+//   //   card4Data,
+//   //   card5Data,
+//   //   card6Data,
+//   //   card7Data,
+//   //   card8Data,
+//   //   card9Data,
+//   //   card10Data,
+//   // ] = resInfo?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+  
+//   // const section1 = card1Data?.card?.card;
+//   // const section2 = card2Data?.card?.card;
+//   // const section3 = card3Data?.card?.card;
+//   // const section4 = card4Data?.card?.card;
+//   // const section5 = card5Data?.card?.card;
+//   // const section6 = card6Data?.card?.card;
+//   // const section7 = card7Data?.card?.card;
+//   // const section8 = card8Data?.card?.card;
+//   // const section9 = card9Data?.card?.card;
+//   // const section10 = card10Data?.card?.card;
+  
+//   // const section1Data = section1
+//   //   ? { itemCards: section1.itemCards, title: section1.title }
+//   //   : null;
+//   // const section2Data = section2
+//   //   ? { itemCards: section2.itemCards, title: section2.title }
+//   //   : null;
+//   // const section3Data = section3
+//   //   ? { itemCards: section3.itemCards, title: section3.title }
+//   //   : null;
+//   // const section4Data = section4
+//   //   ? { itemCards: section4.itemCards, title: section4.title }
+//   //   : null;
+//   // const section5Data = section5
+//   //   ? { itemCards: section5.itemCards, title: section5.title }
+//   //   : null;
+//   // const section6Data = section6
+//   //   ? { itemCards: section6.itemCards, title: section6.title }
+//   //   : null;
+//   // const section7Data = section7
+//   //   ? { itemCards: section7.itemCards, title: section7.title }
+//   //   : null;
+//   // const section8Data = section8
+//   //   ? { itemCards: section8.itemCards, title: section8.title }
+//   //   : null;
+//   // const section9Data = section9
+//   //   ? { itemCards: section9.itemCards, title: section9.title }
+//   //   : null;
+//   // const section10Data = section10
+//   //   ? { itemCards: section10.itemCards, title: section10.title }
+//   //   : null;
+  
+//   // const menuSections = [
+//   //   section1Data,
+//   //   section2Data,
+//   //   section3Data,
+//   //   section4Data,
+//   //   section5Data,
+//   //   section6Data,
+//   //   section7Data,
+//   //   section8Data,
+//   //   section9Data,
+//   //   section10Data,
+//   // ].filter(Boolean);
+  
+//   // console.log(menuSections);
+
+//   const cardsData = resInfo?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+
+// // const menuSections = cardsData
+// //   .slice(1, 11) // Process only up to 10 cards (excluding the first)
+// //   .map(cardData => cardData?.card?.card) // Extract the inner card
+// //   .filter(card => card) // Filter out any undefined or null cards
+// //   .map(card => ({  // Transform to the desired format
+// //     itemCards: card.itemCards,
+// //     title: card.title,
+// //   }));
+
+// const menuSections = cardsData
+//   .slice(1) // Exclude the first card
+//   .map(cardData => cardData?.card?.card) // Extract the inner card
+//   .filter(card => card) // Filter out any undefined or null cards
+//   .map(card => ({  // Transform to the desired format
+//     itemCards: card.itemCards,
+//     title: card.title,
+//   }));
+
+// console.log(menuSections);
+  
+//   return (
+//     <>
+//       <div style={{ paddingLeft: "25%", border: "1px solid", margin: "10%" }}>
+//         <h1>{name}</h1>
+//         <p>{cuisines.join(",")}</p>
+//         <p>{costForTwoMessage}</p>
+//         <p>{avgRating}</p>
+//       </div>
+//       <div style={{ paddingLeft: "25%", border: "1px solid", margin: "10%" }}>
+//         {/* <h1>Menu</h1> */}
+//         {/* <h2>{title} ({itemCards.length})</h2>  */}
+//         {/* <ul>
+//           {itemCards.map((item) => (
+//             <li key={item.card.info.id}>{item.card.info.name} </li>
+//           ))}{" "}
+//         </ul> */}
+
+//         <h1>Menu</h1>
+//         {menuSections.length === 0 ? (
+//           <p>No menu sections found.</p>
+//         ) : (
+//           <ul>
+//             {menuSections.map((section, index) => (
+//               <li key={index}>
+//                 <h2>{section.title}</h2>
+//                 {section.itemCards ? (
+//                   <>
+//                     {/* <p>Contains {section.itemCards.length} items.</p>   */}
+//                     <ul>
+//                       {section.itemCards.map((item) => (
+//                         <li key={item.card.info.id}>{item.card.info.name} </li>
+//                       ))}{" "}
+//                     </ul>
+//                   </>
+//                 ) : (
+//              <p></p>
+//                 )}
+//               </li>
+//             ))}
+//           </ul>
+//         )}
+//       </div>
+//     </>
+//   );
+// };
+// export default RestroInfo;
+
   

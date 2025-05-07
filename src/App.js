@@ -1,17 +1,16 @@
 
 import "./App.css";
 import HeaderComponent from "./components/HeaderComponent";
-import BodyComponent from "./components/BodyComponent";
-
-
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <HeaderComponent />
-      <BodyComponent />
+      <Outlet />
     </>
   );
 };
+
 
 export default App;

@@ -1,7 +1,7 @@
 import {restroImageUrl} from "../utils/constants";
 const RestroCard = (props) => {
    
-    const { resDetails } = props;
+   const { resDetails } = props;
     const {
       cloudinaryImageId,
       name,
@@ -20,7 +20,7 @@ const RestroCard = (props) => {
         <div className="resto-name">{name}</div>
         <div className="restro-details-something-like-that-i-mean">
           <p>
-            {cuisines.join(",")}
+            {cuisines.slice(0, 2).join(',')}
             <span className="align-right">{costForTwo}</span>
           </p>
           <p>
